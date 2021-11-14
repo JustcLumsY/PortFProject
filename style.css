@@ -49,9 +49,13 @@ ul {
     property: var(--variable-name);
   } */
 
-
+  .homeTextStyle {
+    text-align: center;
+    text-align-last: center;
+}
   nav h1 {
     color: var(--primary-color);
+    
   }
   
   nav a {
@@ -271,8 +275,9 @@ ul {
   position: relative;
   font-family: 'Road Rage', cursive;
   font-size: 150px;
-  color: #7591ad;
-  animation: welcomeIcon 4s  linear 2.5s;
+  color: #241818;
+  animation: welcomeIcon 4s linear 2.5s;
+  animation-fill-mode:forwards;
   top: -21vh;
   left: 29vh;
 
@@ -283,7 +288,7 @@ ul {
        animation: welcomeText 5s linear;
        font-size: 150px;
        font-family: 'Road Rage', cursive;
-       color: #7591ad;
+       color: #241818;
      
      }
 
@@ -292,6 +297,7 @@ ul {
       50%  {top: 50px;}
       75% {top: 60px; -webkit-transform: scale(1) rotate(10deg);}
       100% {top: -2px;}
+      
     }
 
 
@@ -301,14 +307,14 @@ ul {
         100% {top: -90px; -webkit-transform: scale(0) rotate(10deg);}
         
      } */
+   
 
 
      @keyframes welcomeIcon {
-      0%   {top: -180px;}
-      50%  {top: -100px;}
-      75% {top: -250px;}
-      
-     
+      0%   {top: -180px; color:#241818;}
+      50%  {top: -100px; color:#241818;}
+      75% {top: -250px; color:#241818;}
+      100%{color: rgb(193 70 42);}
      }
 
   
@@ -317,3 +323,5 @@ ul {
       text-align-last: center;
   }
    
+
+

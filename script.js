@@ -14,6 +14,7 @@ const model = {
     
     pressedBtn : '',
     hasGeneratedArray: false
+
 }
 
 function viewSelector(){
@@ -21,7 +22,7 @@ function viewSelector(){
     html = showNavBar();
 }
 
-function showNavBar(){
+function showNavBar(value){
     let html = ``;
     html = /*html*/`
     <nav>
@@ -37,11 +38,29 @@ function showNavBar(){
     `;
     navBar.innerHTML = html;
 }
+function showHomeView(){
+  html = `
+  <h1 class="homeTextStyle">HomeHeader</h1>
+<hr>
+  <p class="homeTextStyle">   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sed
+  dolorem fugit sapiente porro veniam pariatur dolore nostrum delectus
+  inventore tempore minus nemo, iste ullam illo laboriosam maiores
+  repudiandae quos! </p>
+  <p class="homeTextStyle">  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+  nesciunt excepturi quos obcaecati incidunt voluptatem ipsam sunt ipsum,
+  autem deleniti cupiditate molestias quis unde quae totam porro dicta
+  iure animi inventore, veniam hic! Omnis nulla, delectus a voluptatibus</p>
+  `;
+  content.innerHTML = html;
+}
 
-function showHomeView()
+function showHomeWelcomeText()
 {
   html = `
-  <div id="welcomeAnimation"><h3>Welcome<div id="welcomeAnimationIcon"><h3>!</h3></div></h3></div>
+  <div id="welcomeAnimation"> 
+    <h3>Welcome</h3>
+  <div id="welcomeAnimationIcon">
+  <h3>!</h3></div></div>
   
   
   `;
@@ -96,11 +115,9 @@ function showProsjectView(){
     
   <div class="projectBoxes">
     <div class="innerProjectBox">
-    <img class="jsIcon" src="https://img.icons8.com/color/45/000000/javascript--v1.png">
-    
-    <img class="cssIcon" src="https://img.icons8.com/ios/35/000000/css.png"/>
-    
-    <img class="imgProsjects" onclick="window.location.href='https://justclumsy.github.io/Bubbles-PortF-/index.html';" src="effect1Img.png" width="200" height="175"/>
+      <img class="jsIcon" src="https://img.icons8.com/color/45/000000/javascript--v1.png">
+      <img class="cssIcon" src="https://img.icons8.com/ios/35/000000/css.png"/>
+      <img class="imgProsjects" onclick="window.location.href='https://justclumsy.github.io/Bubbles-PortF-/index.html';" src="effect1Img.png" width="200" height="175"/>
     <hr>
     <p>Code: <a href="https://jsfiddle.net/L5oysvek/2/">jsfiddle</a><p>
     </div>
@@ -108,25 +125,23 @@ function showProsjectView(){
 
   <div class="projectBoxes">
     <div class="innerProjectBox">
-    <img class="jsIcon" src="https://img.icons8.com/color/45/000000/javascript--v1.png">
-    <img class="cssIcon" src="https://img.icons8.com/ios/35/000000/css.png"/>
+      <img class="jsIcon" src="https://img.icons8.com/color/45/000000/javascript--v1.png">
+      <img class="cssIcon" src="https://img.icons8.com/ios/35/000000/css.png"/>
       <img class="imgProsjects" onclick="window.location.href='https://justclumsy.github.io/Freeze-PortF/indexFreeze.html';" src="freezeImg.png" width="200" height="175"/>
       <hr>
       <p>Code: <a href="https://jsfiddle.net/L5oysvek/3/">jsfiddle</a><p>
     </div>
   </div>
  
-  
   <div class="projectBoxes">
     <div class="innerProjectBox">
-    <img class="jsIcon" src="https://img.icons8.com/color/45/000000/javascript--v1.png">
-    <img class="cssIcon" src="https://img.icons8.com/ios/35/000000/css.png"/>
+      <img class="jsIcon" src="https://img.icons8.com/color/45/000000/javascript--v1.png">
+      <img class="cssIcon" src="https://img.icons8.com/ios/35/000000/css.png"/>
       <img class="imgProsjects" onclick="window.location.href='https://justclumsy.github.io/Something-PortF/index.html';" src="someThingImg.png" width="200" height="175"/>
     <hr>
    <p>Code: <a href="https://jsfiddle.net/nrLg3hkp/">jsfiddle</a><p>
     </div>
   </div>
-
 
   <div class="projectBoxes">
     <div class="innerProjectBox">
@@ -142,17 +157,20 @@ function showProsjectView(){
     content.innerHTML = html;
 }
 
-// freezeImg
-// effect1Img
-// image preview fra de forskjellige effekten ( I div'ene på Prosjects)
-
 function showFooter(){
   html = /*html*/`
 
-<p><b>J.E.N.T</b></p>
-<p>Info: </p>
+<p id="jentFooter"><b>J.E.N.T</b></p>
+<p class="footerInfo">Info: </p>
+
 
   `;
   footer.innerHTML = html;
 }
-showFooter()
+showFooter();
+
+
+  setTimeout(function(){
+    showProsjectView();
+  }, 7500);
+
