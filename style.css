@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Road+Rage&display=swap');
+:root 
+{
+  --variable-name: value;
+  --font-family: "Roboto", sans-serf;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #7591ad;;
+  --primary-color: white;
+  --secondary-color: #ff7235;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+html 
+{
+  scroll-behavior: smooth;
+}
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+  
+  a:hover {
+    color: var(--secondary-color);
+  }
+  
+  body {
+    font-family: var(--font-family);
+  }
+/* selector {
+    property: var(--variable-name);
+  } */
+
+
+  nav h1 {
+    color: var(--primary-color);
+  }
+  
+  nav a {
+    color: var(--primary-color);
+    transition: var(--transition);
+  }
+  nav a:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 1.9rem;
+  }
+  
+  nav ul li {
+    font-weight: var(--bold-font);
+  }
+
+
+  nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3.5rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+    
+    .burger-menu 
+    {
+      color: var(--primary-color);
+      font-size: 2rem;
+      border: 0;
+      background-color: transparent;
+      cursor: pointer;
+      display: none;
+    }
+
+    .hero 
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+        max-width: 68.75rem;
+        margin: auto;
+      }
+
+      .hero img {
+        height: 37.5rem;
+        width: 37.5rem;
+      }
+      
+      .bio {
+        width: 25rem;
+        padding: 0.625rem;
+        border-radius: 6px;
+        box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+      }
+      
+      .bio h1 {
+        margin-bottom: var(--bottom-margin);
+      }
+      
+      .bio p {
+        line-height: var(--line-height);
+        padding: 0.3rem 0;
+      }
+
+      .more-about {
+        background-color: var(--bg-color);
+        padding: 1rem 6rem;
+      }
+      
+      .more-about h2 {
+        margin-bottom: var(--bottom-margin);
+        text-align: center;
+      }
+      
+      .more-about p {
+        line-height: var(--line-height);
+        padding: 0.4rem;
+      }
+
+      .skills {
+        max-width: 68.75rem;
+        margin: auto;
+        text-align: center;
+        margin-top: 2.5rem;
+      }
+      
+      .skill-header {
+        margin-bottom: 1rem;
+      }
+      
+      .skills-wrapper img {
+        padding: 1.25rem;
+      }
+      
+      .icon {
+        width: 11.875rem;
+        height: 11.25rem;
+      }
+
+
+      .projectBoxes 
+      {
+        text-align: center;
+        align-items: center;
+        display: flex;
+        /* height: 33vh;
+        width: 20vw; */
+        border: outset 5px ghostwhite;
+        /* border: 2px solid black; */
+        position: relative;
+        margin-top: 5vh;
+        float: left;
+        margin-left: 4vw;
+        overflow: hidden;
+
+    }
+
+      #footer 
+      {
+        position: absolute;
+        background: #9c9c9c;
+        bottom: 0;
+        left: 0;
+        height: 8vh;
+        width: 100%;
+      }
+
+
+        #content
+        {
+          height: 84vh;
+          background: #c8c8c8;
+          overflow: auto;
+          text-align-last: left;
+        }
+        
+
+
+     .imgProsjects
+     {
+       overflow: auto;
+       border-radius: 50%;
+       cursor: pointer;
+       margin-right: 34px;
+     }
+     .imgProsjects:hover 
+     {
+      box-shadow: 1px 2px 3px 2px black;
+    }
+    
+    
+     
+
+     .innerProjectBox
+     {
+      background: #c1c1c1;
+      width: 100%;
+      height: 100%;
+      padding: 21px;
+      border: 1rem solid lightslategray;
+     }
+
+     p 
+     {
+      font-family: 'Road Rage', cursive;
+      font-size: 34px;
+     }
+
+     .tryText
+     {
+      font-family: 'Road Rage', cursive;
+      float: left;
+      font-size: 25px;
+      margin-top: 5vh;
+     }
+
+     a 
+     {
+       color:#007f34;
+      }
+     
+
+     a:hover{
+       color: rgb(34, 255, 34);
+       /* text-decoration: underline; */
+     }
+   
+     .jsIcon
+     {
+       position: absolute;
+       display: flex;
+     }
+
+     .cssIcon
+     {
+       position: relative;
+       background-color: #66dcff;
+       float: left;
+       display: flex;
+       top: 4vh;
+       margin-left: 5px;
+     }
+
+#welcomeAnimationIcon
+{
+  position: relative;
+  font-family: 'Road Rage', cursive;
+  font-size: 150px;
+  color: #7591ad;
+  animation: welcomeIcon 4s  linear 2.5s;
+  top: -21vh;
+  left: 29vh;
+
+}
+     #welcomeAnimation 
+     {
+       position: relative;
+       animation: welcomeText 5s linear;
+       font-size: 150px;
+       font-family: 'Road Rage', cursive;
+       color: #7591ad;
+     
+     }
+
+     @keyframes welcomeText {
+      0%   {top: -180px;}
+      50%  {top: 50px;}
+      75% {top: 60px; -webkit-transform: scale(1) rotate(10deg);}
+      100% {top: -2px;}
+    }
+
+
+      /* @-webkit-keyframes welcomeText {
+        0%   {top: -90px;}
+        50%  {top: 10px;}
+        100% {top: -90px; -webkit-transform: scale(0) rotate(10deg);}
+        
+     } */
+
+
+     @keyframes welcomeIcon {
+      0%   {top: -180px;}
+      50%  {top: -100px;}
+      75% {top: -250px;}
+      
+     
+     }
+
+  
+    h3 {
+      text-transform: uppercase;
+      text-align-last: center;
+  }
+   
