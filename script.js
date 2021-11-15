@@ -4,76 +4,91 @@ const footer = document.getElementById('footer');
 
 content.height = window.innerHeight;
 content.width = window.innerWidth;
+
+
+let historyArray = [];
+
 window.addEventListener('resize', function(){
+  content.height = window.innerHeight;
+  content.width = window.innerWidth;
+});
+window.addEventListener("load", function(){
+   if (window.location.href === "http://127.0.0.1:5500/index.html") {
+     showHomeWelcomeText();
   
-content.height = window.innerHeight;
-content.width = window.innerWidth;
-})
+    // else window.location.href = "http://127.0.0.1:5500/#projects"
+ }});
+ 
+// animate.onload = function(){
 
-const model = {
-    
-    pressedBtn : '',
-    hasGeneratedArray: false
-
-}
+// };
+// setTimeout(function(){
+//   showProsjectView();
+//  }, 7500);
+// } 
+// window.history.state.prevUrl;
+// window.history.pushState({ prevUrl: window.location.href}), null,
 
 function viewSelector(){
     let html = '';
     html = showNavBar();
 }
 
-function showNavBar(value){
+function showNavBar(){
     let html = ``;
     html = /*html*/`
-    <nav>
+  <nav>
       <a href="#Home" onclick="showHomeView();"> <h1>J.E.N.T</h1> </a>
       <ul class="navigation">
-        <li><a href="#about" onclick="showAboutView();" class="nav-link">About</a></li>
+        <li><a  onclick="historyArray.push(showAboutView());" class="nav-link">About</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" onclick="showProsjectView();"class="nav-link">Projects</a></li>
+        <li><a href="#projects" onclick="historyArray.push(showProsjectView());"class="nav-link">Projects</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
-     
 </nav>
     `;
     navBar.innerHTML = html;
 }
+
 function showHomeView(){
   html = `
   <h1 class="homeTextStyle">HomeHeader</h1>
-<hr>
-  <p class="homeTextStyle">   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sed
-  dolorem fugit sapiente porro veniam pariatur dolore nostrum delectus
-  inventore tempore minus nemo, iste ullam illo laboriosam maiores
-  repudiandae quos! </p>
-  <p class="homeTextStyle">  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-  nesciunt excepturi quos obcaecati incidunt voluptatem ipsam sunt ipsum,
-  autem deleniti cupiditate molestias quis unde quae totam porro dicta
-  iure animi inventore, veniam hic! Omnis nulla, delectus a voluptatibus</p>
+    <hr>
+      <p class="homeTextStyle">   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sed
+        dolorem fugit sapiente porro veniam pariatur dolore nostrum delectus
+        inventore tempore minus nemo, iste ullam illo laboriosam maiores
+        repudiandae quos! </p>
+        <p class="homeTextStyle">  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+        nesciunt excepturi quos obcaecati incidunt voluptatem ipsam sunt ipsum,
+        autem deleniti cupiditate molestias quis unde quae totam porro dicta
+        iure animi inventore, veniam hic! Omnis nulla, delectus a voluptatibus
+      </p>
   `;
   content.innerHTML = html;
 }
+
 
 function showHomeWelcomeText()
 {
   html = `
   <div id="welcomeAnimation"> 
     <h3>Welcome</h3>
-  <div id="welcomeAnimationIcon">
-  <h3>!</h3></div></div>
-  
-  
+
+    <div id="welcomeAnimationIcon">
+    <h3>!</h3>
+
+    </div>
+  </div>
   `;
   content.innerHTML = html;
 }
 
 function showAboutView(){
-
     html = /*html*/`
     <section class="hero" id="about">
     <img
         src="OIP.jpg"
-        alt=""
+        alt="aboutImage"
         loading=""
         class=""
     />
@@ -111,13 +126,14 @@ function showAboutView(){
 }
 
 function showProsjectView(){
+
     html = /*html*/`
-    
+
   <div class="projectBoxes">
     <div class="innerProjectBox">
       <img class="jsIcon" src="https://img.icons8.com/color/45/000000/javascript--v1.png">
       <img class="cssIcon" src="https://img.icons8.com/ios/35/000000/css.png"/>
-      <img class="imgProsjects" onclick="window.location.href='https://justclumsy.github.io/Bubbles-PortF-/index.html';" src="effect1Img.png" width="200" height="175"/>
+      <img alt="BubblesImg" class="imgProsjects" onclick="window.location.href='https://justclumsy.github.io/Bubbles-PortF-/index.html';" src="effect1Img.png" width="200" height="175"/>
     <hr>
     <p>Code: <a href="https://jsfiddle.net/L5oysvek/2/">jsfiddle</a><p>
     </div>
@@ -125,9 +141,9 @@ function showProsjectView(){
 
   <div class="projectBoxes">
     <div class="innerProjectBox">
-      <img class="jsIcon" src="https://img.icons8.com/color/45/000000/javascript--v1.png">
-      <img class="cssIcon" src="https://img.icons8.com/ios/35/000000/css.png"/>
-      <img class="imgProsjects" onclick="window.location.href='https://justclumsy.github.io/Freeze-PortF/indexFreeze.html';" src="freezeImg.png" width="200" height="175"/>
+      <img alt="jsImgIcon" class="jsIcon" src="https://img.icons8.com/color/45/000000/javascript--v1.png">
+      <img alt="cssImgIcon" class="cssIcon" src="https://img.icons8.com/ios/35/000000/css.png"/>
+      <img alt="freezeImg" class="imgProsjects" onclick="window.location.href='https://justclumsy.github.io/Freeze-PortF/indexFreeze.html';" src="freezeImg.png" width="200" height="175"/>
       <hr>
       <p>Code: <a href="https://jsfiddle.net/L5oysvek/3/">jsfiddle</a><p>
     </div>
@@ -135,9 +151,9 @@ function showProsjectView(){
  
   <div class="projectBoxes">
     <div class="innerProjectBox">
-      <img class="jsIcon" src="https://img.icons8.com/color/45/000000/javascript--v1.png">
-      <img class="cssIcon" src="https://img.icons8.com/ios/35/000000/css.png"/>
-      <img class="imgProsjects" onclick="window.location.href='https://justclumsy.github.io/Something-PortF/index.html';" src="someThingImg.png" width="200" height="175"/>
+      <img alt="jsImgIcon" class="jsIcon" src="https://img.icons8.com/color/45/000000/javascript--v1.png">
+      <img alt="cssImgIcon" class="cssIcon" src="https://img.icons8.com/ios/35/000000/css.png"/>
+      <img alt="somethingImg" class="imgProsjects" onclick="window.location.href='https://justclumsy.github.io/Something-PortF/index.html';" src="someThingImg.png" width="200" height="175"/>
     <hr>
    <p>Code: <a href="https://jsfiddle.net/nrLg3hkp/">jsfiddle</a><p>
     </div>
@@ -145,9 +161,9 @@ function showProsjectView(){
 
   <div class="projectBoxes">
     <div class="innerProjectBox">
-    <img class="jsIcon" src="https://img.icons8.com/color/45/000000/javascript--v1.png">
-    <img class="cssIcon" src="https://img.icons8.com/ios/35/000000/css.png"/>
-      <img class="imgProsjects" onclick="window.location.href='https://justclumsy.github.io/CanvasWallpaper/index.html';" src="wallPaperHex.png" width="200" height="175"/>
+    <img alt="jsImgIcon" class="jsIcon" src="https://img.icons8.com/color/45/000000/javascript--v1.png">
+    <img alt="cssImgIcon" class="cssIcon" src="https://img.icons8.com/ios/35/000000/css.png"/>
+      <img alt="wallpaperImg" class="imgProsjects" onclick="window.location.href='https://justclumsy.github.io/CanvasWallpaper/index.html';" src="wallPaperHex.png" width="200" height="175"/>
       <hr>
       <p>Code: <a href="">jsfiddle</a><p>
     </div>
@@ -162,15 +178,10 @@ function showFooter(){
 
 <p id="jentFooter"><b>J.E.N.T</b></p>
 <p class="footerInfo">Info: </p>
-
-
   `;
   footer.innerHTML = html;
 }
 showFooter();
 
 
-  setTimeout(function(){
-    showProsjectView();
-  }, 7500);
 
