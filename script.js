@@ -5,40 +5,30 @@ const footer = document.getElementById('footer');
 content.height = window.innerHeight;
 content.width = window.innerWidth;
 
-
-let historyArray = [];
-
 window.addEventListener('resize', function(){
   content.height = window.innerHeight;
   content.width = window.innerWidth;
 });
-window.addEventListener("load", function(){
-   if (window.location.href === "http://127.0.0.1:5500/index.html") {
-     showHomeWelcomeText();
-  
-    // else window.location.href = "http://127.0.0.1:5500/#projects"
- }});
- 
-// animate.onload = function(){
 
-// };
-// setTimeout(function(){
-//   showProsjectView();
-//  }, 7500);
-// } 
-// window.history.state.prevUrl;
-// window.history.pushState({ prevUrl: window.location.href}), null,
+window.addEventListener("load", function(){
+  if (window.location.href === "http://127.0.0.1:5500/index.html") {
+    showHomeWelcomeText();
+ 
+   // else window.location.href = "http://127.0.0.1:5500/#projects"
+}});
+
+let historyArray = [];
 
 function viewSelector(){
-    let html = '';
-    html = showNavBar();
+  let html = '';
+  html = showNavBar();
 }
 
 function showNavBar(){
     let html = ``;
     html = /*html*/`
-  <nav>
-      <a href="#Home" onclick="showHomeView();"> <h1>J.E.N.T</h1> </a>
+<nav>
+    <a href="#Home" onclick="showHomeView();"> <h1>J.E.N.T</h1> </a>
       <ul class="navigation">
         <li><a  onclick="historyArray.push(showAboutView());" class="nav-link">About</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
@@ -67,7 +57,6 @@ function showHomeView(){
   content.innerHTML = html;
 }
 
-
 function showHomeWelcomeText()
 {
   html = `
@@ -75,7 +64,7 @@ function showHomeWelcomeText()
     <h3>Welcome</h3>
 
     <div id="welcomeAnimationIcon">
-    <h3>!</h3>
+      <h3>!</h3>
 
     </div>
   </div>
@@ -85,7 +74,7 @@ function showHomeWelcomeText()
 
 function showAboutView(){
     html = /*html*/`
-    <section class="hero" id="about">
+<section class="hero" id="about">
     <img
         src="OIP.jpg"
         alt="aboutImage"
@@ -104,21 +93,21 @@ function showAboutView(){
 </section>
 
 <section class="more-about">
-<h2>More About Me</h2>
-<p>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-  nesciunt excepturi quos obcaecati incidunt voluptatem ipsam sunt ipsum,
-  autem deleniti cupiditate molestias quis unde quae totam porro dicta
-  iure animi inventore, veniam hic! Omnis nulla, delectus a voluptatibus
-</p>
-<p>
-  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur
-  nostrum dolor minus, libero delectus praesentium perferendis
-</p>
-<p>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
-  consequuntur labore? Ea totam voluptas amet!
-</p>
+  <h2>More About Me</h2>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+    nesciunt excepturi quos obcaecati incidunt voluptatem ipsam sunt ipsum,
+    autem deleniti cupiditate molestias quis unde quae totam porro dicta
+    iure animi inventore, veniam hic! Omnis nulla, delectus a voluptatibus
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur
+    nostrum dolor minus, libero delectus praesentium perferendis
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
+    consequuntur labore? Ea totam voluptas amet!
+  </p>
 </section>
     `;
     
@@ -126,8 +115,7 @@ function showAboutView(){
 }
 
 function showProsjectView(){
-
-    html = /*html*/`
+html = /*html*/`
 
   <div class="projectBoxes">
     <div class="innerProjectBox">
@@ -135,7 +123,7 @@ function showProsjectView(){
       <img class="cssIcon" src="https://img.icons8.com/ios/35/000000/css.png"/>
       <img alt="BubblesImg" class="imgProsjects" onclick="window.location.href='https://justclumsy.github.io/Bubbles-PortF-/index.html';" src="effect1Img.png" width="200" height="175"/>
     <hr>
-    <p>Code: <a href="https://jsfiddle.net/L5oysvek/2/">jsfiddle</a><p>
+      <p>Code: <a href="https://jsfiddle.net/L5oysvek/2/">jsfiddle</a><p>
     </div>
   </div>
 
@@ -145,7 +133,7 @@ function showProsjectView(){
       <img alt="cssImgIcon" class="cssIcon" src="https://img.icons8.com/ios/35/000000/css.png"/>
       <img alt="freezeImg" class="imgProsjects" onclick="window.location.href='https://justclumsy.github.io/Freeze-PortF/indexFreeze.html';" src="freezeImg.png" width="200" height="175"/>
       <hr>
-      <p>Code: <a href="https://jsfiddle.net/L5oysvek/3/">jsfiddle</a><p>
+        <p>Code: <a href="https://jsfiddle.net/L5oysvek/3/">jsfiddle</a><p>
     </div>
   </div>
  
@@ -155,7 +143,7 @@ function showProsjectView(){
       <img alt="cssImgIcon" class="cssIcon" src="https://img.icons8.com/ios/35/000000/css.png"/>
       <img alt="somethingImg" class="imgProsjects" onclick="window.location.href='https://justclumsy.github.io/Something-PortF/index.html';" src="someThingImg.png" width="200" height="175"/>
     <hr>
-   <p>Code: <a href="https://jsfiddle.net/nrLg3hkp/">jsfiddle</a><p>
+      <p>Code: <a href="https://jsfiddle.net/nrLg3hkp/">jsfiddle</a><p>
     </div>
   </div>
 
@@ -165,7 +153,7 @@ function showProsjectView(){
     <img alt="cssImgIcon" class="cssIcon" src="https://img.icons8.com/ios/35/000000/css.png"/>
       <img alt="wallpaperImg" class="imgProsjects" onclick="window.location.href='https://justclumsy.github.io/CanvasWallpaper/index.html';" src="wallPaperHex.png" width="200" height="175"/>
       <hr>
-      <p>Code: <a href="">jsfiddle</a><p>
+        <p>Code: <a href="">jsfiddle</a><p>
     </div>
   </div>
  

@@ -45,9 +45,6 @@ ul {
   body {
     font-family: var(--font-family);
   }
-/* selector {
-    property: var(--variable-name);
-  } */
 
   .homeTextStyle {
     text-align: center;
@@ -172,8 +169,6 @@ ul {
         text-align: center;
         align-items: center;
         display: flex;
-        /* height: 33vh;
-        width: 20vw; */
         border: outset 5px ghostwhite;
         position: relative;
         margin-top: 5vh;
@@ -250,7 +245,6 @@ ul {
 
      a:hover{
        color: rgb(34, 255, 34);
-       /* text-decoration: underline; */
      }
    
      .jsIcon
@@ -298,8 +292,6 @@ ul {
       100% {top: -2px;}
       
     }
-
-
       /* @-webkit-keyframes welcomeText {
         0%   {top: -90px;}
         50%  {top: 10px;}
@@ -307,8 +299,6 @@ ul {
         
      } */
    
-
-
      @keyframes welcomeIcon {
       0%   {top: -180px; color:#241818;}
       50%  {top: -100px; color:#241818;}
